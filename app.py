@@ -92,7 +92,7 @@ def main():
 
     st.caption(f"사용 중 데이터: `{data_path}`")
 
-    sid = st.text_input("학번을 입력하세요", placeholder="예) 2023320033", max_chars=20)
+    sid = st.text_input("학번을 입력하세요", placeholder="예) 2000320000", max_chars=20)
     if st.button("검색") or sid:
         q = normalize_sid(sid)
         if not q:
@@ -111,4 +111,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
