@@ -67,6 +67,8 @@ def admin_panel():
     pw = st.text_input("관리자 비밀번호", type="password")
     uploaded = st.file_uploader("엑셀/CSV 업로드", type=["xlsx", "xls", "csv"])
 
+    admin_pw = "7750"
+
     if uploaded and pw == admin_pw:
         target = TMP_XLSX if uploaded.name.lower().endswith(("xlsx", "xls")) else TMP_CSV
         target.write_bytes(uploaded.getbuffer())
@@ -109,3 +111,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
